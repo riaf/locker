@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title><?= $title ?></title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+  </head>
+  <body>
+    <div class="container">
+      <h1>Locker admin</h1>
+
+      <table class="table">
+        <thead class="thead-inverse">
+          <tr>
+            <th>ID</th>
+            <th>タイトル</th>
+            <th>ダウンロード数</th>
+            <th>有効期限</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody>
+          <?php foreach ($files as $file): ?>
+            <tr>
+              <td><a href="/files/<?= $file->id ?>"><?= $file->id ?></a></td>
+              <td><?= $file->title ?></td>
+              <td><?= $file->download_count ?></td>
+              <td><?= $file->expires_at ?></td>
+              <td>
+                <form action="/admin/files/<?= $file->id ?>" method="post">
+                  <input type="hidden" name="_METHOD" value="DELETE">
+                  <button type="submit" class="btn btn-sm btn-danger">&times;</button>
+                </form>
+              </td>
+            </tr>
+          <?php endforeach ?>
+        </tbody>
+        <tfoot>
+          <tr class="table-active">
+            <td colspan="5"><a href="/admin/files/new">ファイルを追加する</a></td>
+          </tr>
+        </tfoot>
+      </table>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+  </body>
+</html>
+

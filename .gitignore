@@ -1,0 +1,9 @@
+.php_cs.cache
+/src/settings.php
+/vendor/
+/logs/*
+!/logs/README.md
+/var/database/*
+!/var/database/README.md
+/var/files/*
+!/var/files/README.md

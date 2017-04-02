@@ -1,0 +1,26 @@
+{
+    "name": "riaf/locker",
+    "description": "File transfer service application.",
+    "homepage": "https://github.com/riaf/locker",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Keisuke Sato",
+            "email": "riaf@me.com",
+            "homepage": "http://riaf.jp"
+        }
+    ],
+    "require": {
+        "php": ">=7",
+        "slim/slim": "^3.1",
+        "slim/php-view": "^2.0",
+        "monolog/monolog": "^1.17",
+        "tuupola/slim-basic-auth": "^2.2",
+        "aura/sql": "^2.5",
+        "ramsey/uuid": "^3.6",
+        "guzzlehttp/psr7": "^1.4"
+    },
+    "scripts": {
+        "start": "php -S 0.0.0.0:8080 -t public public/index.php"
+    }
+}

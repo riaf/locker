@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title><?= $title ?></title>
+    <link rel="stylesheet" type="text/css" href="/css/style.css">
+  </head>
+  <body>
+    <h1><?= $title ?></h1>
+
+    <section class="file">
+      <h2><?= $file->title ?></h2>
+      <p><?= nl2br($file->description) ?></p>
+      <p>
+        <a download href="/download/<?= $file->id ?>">ダウンロード</a><br>
+        (<?= round($filesize / 1024 / 1024, 3) ?>MB)
+      </p>
+    </section>
+
+    <footer>
+      <p><a href="https://github.com/riaf/locker">Powered by Locker.</a></p>
+    </footer>
+  </body>
+</html>
+

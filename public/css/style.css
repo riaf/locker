@@ -1,0 +1,43 @@
+body {
+  color: #333;
+  font-family: -apple-system, 'BlinkMacSystemFont', 'Noto Sans CJK JP', sans-serif;
+  font-feature-settings: 'pkna';
+  text-align: center;
+}
+
+a {
+  color: #333;
+  text-decoration: none;
+}
+
+a:hover, a:active {
+  text-decoration: underline;
+}
+
+a[download] {
+  background-color: #f0fff0;
+  border-radius: 3px;
+  border: 1px solid #006400;
+  color: #006400;
+  display: block;
+  font-weight: bold;
+  margin: 1em auto 0;
+  padding: 1em;
+  width: 10em;
+}
+
+.file {
+  background-color: #f5f5f5;
+  border: 1px solid #dbdbdb;
+  margin: 2em auto;
+  width: 90%;
+}
+
+body > footer {
+  background-color: #f5f5f5;
+  border-top: 1px solid #dbdbdb;
+  bottom: 0;
+  left: 0;
+  position: fixed;
+  width: 100%;
+}

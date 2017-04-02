@@ -1,0 +1,34 @@
+<?php
+return [
+    'settings' => [
+        'displayErrorDetails' => true, // set to false in production
+        'addContentLengthHeader' => true, // Allow the web server to send the content-length header
+
+        // Admin users
+        'admin_users' => [
+            'admin' => 'passw0rd',
+        ],
+
+        // Renderer settings
+        'renderer' => [
+            'template_path' => __DIR__ . '/../templates/',
+            'global_variables' => [
+                'title' => 'My File Transfer',
+            ],
+        ],
+
+        // Database settings
+        'database' => [
+            'dsn' => 'sqlite:' . __DIR__ . '/../var/database/locker.db',
+            'username' => null,
+            'password' => null,
+        ],
+
+        // Monolog settings
+        'logger' => [
+            'name' => 'locker',
+            'path' => __DIR__ . '/../logs/app.log',
+            'level' => \Monolog\Logger::DEBUG,
+        ],
+    ],
+];
